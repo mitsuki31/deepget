@@ -28,7 +28,7 @@
     "minify": "npm run minify:esm && npm run minify:cjs",
     "minify:esm": "uglifyjs --config-file uglify.config.json dist/esm/index.mjs -o dist/esm/index.mjs",
     "minify:cjs": "uglifyjs --config-file uglify.config.json dist/cjs/index.cjs -o dist/cjs/index.cjs",
-    "docs": "typedoc --options typedoc.config.js",
+    "docs": "node --disable-warning=ExperimentalWarning ./node_modules/.bin/typedoc --options typedoc.config.mjs",
     "test": "mocha test/*.spec.*",
     "pretest": "npm run build:prod",
     "prepublishOnly": "npm run test",
