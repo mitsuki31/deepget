@@ -1,5 +1,5 @@
 {
-  "name": "deepget",
+  "name": "@mitsuki31/deepget",
   "version": "1.0.0",
   "title": "DeepGet",
   "description": "A lightweight and safe utility for retrieving values from deeply nested JavaScript objects using dot and array notation, ensuring undefined safety",
@@ -65,6 +65,6 @@
     "uglify-js": "^3.19.3"
   },
   "dependencies": {
-    "deepget": "file:"
+    "@mitsuki31/deepget": "file:"
   }
 }

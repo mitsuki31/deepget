@@ -15,7 +15,7 @@ Say goodbye to complex conditional checks and errors — **DeepGet** simplifies 
 ## Installation
 
 ```sh
-npm install deepget
+npm install @mitsuki31/deepget
 ```
 
 ## Usage
@@ -25,19 +25,19 @@ npm install deepget
 #### CommonJS
 
 ```js
-const { DeepGet } = require('deepget');
+const { DeepGet } = require('@mitsuki31/deepget');
 ```
 
 #### ES Module
 
 ```js
-import DeepGet from 'deepget';
+import DeepGet from '@mitsuki31/deepget';
 // Or: import { DeepGet } from 'deepget';
 ```
 
 > TIP: For more simplicity naming purpose, you can do, for example:
 > ```js
-> import DeepGet as DG from 'deepget';
+> import DeepGet as DG from '@mitsuki31/deepget';
 > ```
 
 ### Basic Usage
@@ -67,20 +67,9 @@ const obj = { a: { b: { c: 42 } } };
 console.log(DeepGet(obj, "a::b::c", { sep: "::" })); // 42
 ```
 
-<!-- FIXME
 ## API
 
-### `DeepGet(obj: object, key: string): any | undefined`
-
-Retrieves a value from a nested object based on a dot notation key.
-
-#### Parameters:
-- **`obj`** *(object)* – The object to retrieve the value from.
-- **`key`** *(string)* – The dot-notation key path.
-
-#### Returns:
-- The found value or `undefined` if the key does not exist or input is invalid.
--->
+Refer to the [**Homepage**](https://mitsuki31.github.io/deepget) for detailed APIs information.
 
 ## Why Use DeepGet?
 
