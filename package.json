@@ -1,0 +1,70 @@
+{
+  "name": "deepget",
+  "version": "1.0.0",
+  "title": "DeepGet",
+  "description": "A lightweight and safe utility for retrieving values from deeply nested JavaScript objects using dot and array notation, ensuring undefined safety",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "prebuild": "npm run clean",
+    "postbuild": "mv dist/esm/index.js dist/esm/index.mjs && mv dist/cjs/index.js dist/cjs/index.cjs",
+    "build:prod": "npm run build && npm run minify",
+    "minify": "npm run minify:esm && npm run minify:cjs",
+    "minify:esm": "uglifyjs --config-file uglify.config.json dist/esm/index.mjs -o dist/esm/index.mjs",
+    "minify:cjs": "uglifyjs --config-file uglify.config.json dist/cjs/index.cjs -o dist/cjs/index.cjs",
+    "docs": "typedoc --options typedoc.config.js",
+    "test": "mocha test/*.spec.*",
+    "pretest": "npm run build:prod",
+    "prepublishOnly": "npm run test",
+    "clean": "rm -rf dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitsuki31/deepget.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "nodejs",
+    "object",
+    "path"
+  ],
+  "author": "Ryuu Mitsuki <dhefam31@gmail.com> (https://github.com/mitsuki31)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mitsuki31/deepget/issues"
+  },
+  "homepage": "https://github.com/mitsuki31/deepget#readme",
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/dhefam31"
+  },
+  "devDependencies": {
+    "@typhonjs-typedoc/typedoc-theme-dmt": "^0.3.1",
+    "chai": "^5.1.2",
+    "mocha": "^11.1.0",
+    "typedoc": "^0.27.7",
+    "typedoc-plugin-rename-defaults": "^0.7.2",
+    "typescript": "^5.7.3",
+    "uglify-js": "^3.19.3"
+  },
+  "dependencies": {
+    "deepget": "file:"
+  }
+}
