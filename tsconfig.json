@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "dist/**/*",
+    "docs/**/*",
+    "node_modules/**/*",
+    "test/**/*"
+  ],
+  "compilerOptions": {
+    "lib": [ "ES5", "DOM" ],
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": false,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "listEmittedFiles": true
+  }
+}

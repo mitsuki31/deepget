@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "./dist/cjs",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": false
+  }
+}
