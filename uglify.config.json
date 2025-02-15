@@ -1,0 +1,11 @@
+{
+  "compress": false,
+  "mangle": {
+    "toplevel": true,
+    "keep_fnames": true
+  },
+  "output": {
+    "beautify": true,
+    "indent_level": 2
+  }
+}
