@@ -23,7 +23,7 @@ const config = {
   dmtFavicon: undefined,
   dmtLinksService: {
     GitHub: 'https://github.com/mitsuki31/deepget',
-    NPM: 'https://npmjs.com/package/deepget'
+    NPM: 'https://npmjs.com/package/@mitsuki31/deepget'
   },
   dmtNavigation: {
     moduleIcon: true,
